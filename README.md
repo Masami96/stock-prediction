@@ -1,7 +1,14 @@
 # stock-prediction
-Finish the code to crawl all tweets from one person ( and user-defined dates of tweets ).
 
-Use yahoo_finance package or pandas built-in method to crawl stock prices data.
+1. Streaming folder contains codes of excuting crawling through live streaming.
+
+2. Api_Search folder contains codes using api.search to get data roughly 7 days before.
+
+3. Finish the code to crawl all tweets from one person ( and user-defined dates of tweets ).
+
+4. Use yahoo_finance package or pandas built-in method to crawl stock prices data.
+
+
 
 The .csv  files above include the stock price data of TESLA ( you can change to whatever you want ) and all tweets from the CEO of TESLA. I think it's much easier to deal with non-numeric classification so for stock price data each day I create the 'Trend' label to indicate price fluctuation.
 
