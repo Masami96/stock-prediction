@@ -2,7 +2,7 @@
 
 1. Streaming folder contains codes of excuting crawling through live streaming.
 
-2. Api_Search folder contains codes using api.search to get data roughly 7 days before.
+2. Api_Search_keyword folder contains codes using api.search to get data roughly ~7 days ago and some tweets data from tesla, google and nvdia in json format.
 
 3. Finish the code to crawl all tweets from one person ( and user-defined dates of tweets ).
 
