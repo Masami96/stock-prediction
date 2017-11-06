@@ -27,10 +27,6 @@ def write_tweets(tweets, filename):
             json.dump(tweet._json, f)
             f.write('\n')
 
-
-api = api_load()
-
-
 def twitter_search(api, query, since, until, lang, items_num):
         searched_tweets = []
     # while len(searched_tweets) < items_num:
@@ -74,12 +70,14 @@ if __name__ =='__main__':
 
     for keyword in search_keywords:
         print('Now searching for: ',keyword)
+        
         name = keyword.split()[0]
         json_file_root = name + '/' + name
 
         # create the folder to store json data.
         os.makedirs(os.path.dirname(json_file_root), exist_ok=True)
-
+        
+        # create the name of file with date.
         if max_days_old - min_days_old ==1:
             st = dt.datetime.now() - dt.timedelta(days=min_days_old)
             day = '{0}-{1:0>2}-{2:0>2}'.format(st.year, st.month, st.day)
@@ -99,6 +97,7 @@ if __name__ =='__main__':
 
         exitcount = 0
 
+        # loop for tweets crawling and writing to json file.
         while True:
             tweets = twitter_search(api, keyword, since,
                                             until, lang, items_num)
