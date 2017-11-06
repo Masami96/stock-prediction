@@ -41,6 +41,9 @@ def twitter_search(api, query, max_tweets, max_id, since_id, location):
             if not tweets:
                 print('no tweets')
                 break
+            else:
+                for tweet in tweets:
+                    print(tweet.text)
             searched_tweets.extend(tweets)
             max_id=tweets[-1].id
         except tweepy.TweepError:
@@ -70,7 +73,7 @@ if __name__ =='__main__':
     '''
     search day and search keywords could be changed below.
     '''
-    search_keywords = ['#tesla', '#google', '#nvidia']
+    search_keywords = ['nvidia']  #['#tesla', '#google', '#nvidia']
     max_tweets = 100 # max number of tweets per search
     min_days_old, max_days_old = 2, 7
     USA = '39.8,-95.583068847656,2500km'
