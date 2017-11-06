@@ -44,6 +44,7 @@ def twitter_search(api, query, since, until, lang, items_num):
                 # break
             else:
                 for tweet in tweets:
+                    # just exclude the retweets that show up many times.
                     if not tweet.retweeted and 'RT @' not in tweet.text:
                             print(tweet.text)
             searched_tweets.extend(tweets)
