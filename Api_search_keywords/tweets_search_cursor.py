@@ -24,7 +24,7 @@ def write_tweets(tweets, filename):
     '''
     with open(filename, 'a') as f:
         for tweet in tweets:
-            json.dumps(tweet._json, f)
+            json.dump(tweet._json, f)
             f.write('\n')
 
 
