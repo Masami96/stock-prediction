@@ -1,5 +1,5 @@
 crawler for historical tweets
-postprocessing for sentiment analysis and producing data matrix that we need to use for ML
+postprocessing for sentiment analysis and producing data matrix that we need for ML
 get_price for stock price matrix
 
 
