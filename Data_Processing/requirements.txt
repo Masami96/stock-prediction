@@ -1,0 +1,6 @@
+twitterscraper
+langdetect
+pandas_datareader
+pandas
+nltk
+numpy
